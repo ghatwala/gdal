@@ -5,11 +5,11 @@ matrix:
   fast_finish: true
   include:
 
-    - os: linux
+    - os: linux-ppc64le
       compiler: gcc
       language: cpp
       sudo: required
-      dist: precise
+      dist: xenial
       cache:
         apt: true
         directories:
@@ -17,11 +17,11 @@ matrix:
       env:
         - BUILD_NAME=precise
         - DETAILS="debug build, no libtool"
-    - os: linux
+    - os: linux-ppc64le
       compiler: clang
       language: cpp
       sudo: required
-      dist: trusty
+      dist: xenial
       cache:
         apt: true
         directories:
@@ -29,11 +29,11 @@ matrix:
       env:
         - BUILD_NAME=trusty_clang
         - DETAILS="optimized build, no libtool"
-    - os: linux
+    - os: linux-ppc64le
       compiler: clang
       language: cpp
       sudo: required
-      dist: trusty
+      dist: xenial
       cache:
         apt: true
         directories:
@@ -41,11 +41,11 @@ matrix:
       env:
         - BUILD_NAME=mingw_w64
         - DETAILS="optimized build, libtool"
-    - os: linux
+    - os: linux-ppc64le
       compiler: gcc
       language: cpp
       sudo: required
-      dist: precise
+      dist: xenial
       cache:
         apt: true
         directories:
@@ -53,11 +53,11 @@ matrix:
       env:
         - BUILD_NAME=python3
         - DETAILS=""
-    - os: linux
+    - os: linux-ppc64le
       compiler: gcc
       language: cpp
       sudo: false
-      dist: trusty
+      dist: xenial
       cache:
         apt: true
         directories:
@@ -68,11 +68,11 @@ matrix:
       env:
         - BUILD_NAME=android
         - DETAILS=""
-    - os: linux
+    - os: linux-ppc64le
       compiler: gcc
       language: cpp
       sudo: false
-      dist: precise
+      dist: xenial
       cache:
         apt: true
         directories:
@@ -83,11 +83,11 @@ matrix:
       env:
         - BUILD_NAME=big_endian
         - DETAILS=""
-    - os: linux
+    - os: linux-ppc64le
       compiler: gcc
       language: cpp
       sudo: required
-      dist: precise
+      dist: xenial
       cache:
         apt: true
         directories:
@@ -95,11 +95,11 @@ matrix:
       env:
         - BUILD_NAME=gcc52_stdcpp14_sanitize
         - DETAILS=""
-    - os: linux
+    - os: linux-ppc64le
       compiler: gcc
       language: cpp
       sudo: required
-      dist: precise
+      dist: xenial
       cache:
         apt: true
         directories:
@@ -107,11 +107,11 @@ matrix:
       env:
         - BUILD_NAME=ubuntu_1604
         - DETAILS=""
-    - os: linux
+    - os: linux-ppc64le
       compiler: gcc
       language: cpp
       sudo: required
-      dist: trusty
+      dist: xenial
       cache:
         apt: true
         directories:
@@ -119,33 +119,33 @@ matrix:
       env:
         - BUILD_NAME=trusty_32bit
         - DETAILS=""
-    - osx_image: xcode8
-      language: objective-c
-      compiler: clang
-      cache:
-        apt: true
-        directories:
-          - $HOME/.ccache
-      env:
-        - BUILD_NAME=osx
-        - DETAILS="debug build, libtool"
+   # - osx_image: xcode8
+   #   language: objective-c
+   #   compiler: clang
+   #   cache:
+   #     apt: true
+   #     directories:
+   #       - $HOME/.ccache
+   #   env:
+   #     - BUILD_NAME=osx
+   #     - DETAILS="debug build, libtool"
 
-    - os: linux
+    - os: linux-ppc64le
       compiler: gcc
       language: cpp
       sudo: required
-      dist: trusty
+      dist: xenial
       cache:
         apt: true
       env:
         - BUILD_NAME=csa_part_1
         - DETAILS="CLang Static Analyzer part 1"
 
-    - os: linux
+    - os: linux-ppc64le
       compiler: gcc
       language: cpp
       sudo: required
-      dist: trusty
+      dist: xenial
       cache:
         apt: true
       env:
